@@ -1,38 +1,51 @@
+
+/* //* 2.3 App.css 구조 변경 */
+
+/* :root 사용으로 여러 CSS변수의 컨테이너 사용 */
+:root {
+  /* 최소 화면 높이 설정 */
+  --min-screen-height: 1000px;
+}
+
+/* App 클래스의 스타일링 */
 .App {
-  text-align: center;
+  margin: auto; /* 자동 마진으로 가운데 정렬 */
+  max-width: 1200px; /* 최대 너비 설정 */
+  display: grid; /* 그리드 레이아웃 사용 */
+  grid-template-columns: 0.7fr 0.9fr 1.5fr 0.9fr; /* 컬럼의 비율 설정 */
+  grid-template-rows: 2.75rem; /* 행 높이 설정 */
+  grid-template-areas: /* 그리드 영역 이름 설정 */
+    "nav nav nav nav"
+    "sidebar leftmenu content rightmenu";
+  gap: 0.75rem 0.4rem; /* 그리드 항목 사이의 간격 설정 */
+}
+/* 네비게이션 영역 설정 */
+.navigation {
+  grid-area: nav; /* grid-template-areas에서 지정한 'nav' 영역에 매칭 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 사이드바 영역 설정 */
+.sidebar {
+  min-height: var(--min-screen-height); /* 앞서 정의한 --min-screen-height 변수 사용하여 최소 높이 설정 */
+  grid-area: sidebar; /* grid-template-areas에서 지정한 'sidebar' 영역에 매칭 */
+  background-color: aliceblue; /* 배경색 지정 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 왼쪽 메뉴 영역 설정 */
+.leftmenu {
+  grid-area: leftmenu; /* grid-template-areas에서 지정한 'leftmenu' 영역에 매칭 */
+  background-color: skyblue; /* 배경색 지정 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 본문 내용 영역 설정 */
+.content {
+  min-height: var(--min-screen-height); /* 앞서 정의한 --min-screen-height 변수 사용하여 최소 높이 설정 */
+  grid-area: content; /* grid-template-areas에서 지정한 'content' 영역에 매칭 */
+  background-color: blanchedalmond; /* 배경색 지정 */
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 오른쪽 메뉴 영역 설정 */
+.rightmenu {
+  grid-area: rightmenu; /* grid-template-areas에서 지정한 'rightmenu' 영역에 매칭 */
+  background-color: coral; /* 배경색 지정 */
 }

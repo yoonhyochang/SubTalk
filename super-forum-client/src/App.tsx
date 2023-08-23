@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
+
 
 function App() {
   return (
+    //* 2.2 앱 레이아웃 구조 설정
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <nav className="navigation">Nav</nav>
+    <div className="sidebar">Sidebar</div>
+    <div className="leftmenu">Left menu</div>
+    <main className="content">Main</main>
+    <div className="rightmenu">Right Menu</div>
     </div>
   );
 }
 
 export default App;
+//* 2.3 App.css 파일 이동
