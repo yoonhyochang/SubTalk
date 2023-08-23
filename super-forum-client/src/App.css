@@ -49,3 +49,6 @@
   grid-area: rightmenu; /* grid-template-areas에서 지정한 'rightmenu' 영역에 매칭 */
   background-color: coral; /* 배경색 지정 */
 }
+
+/* //* 3 반응형에서 랜더링 효율화 하기*/
+/* //* 3.1 src/components 폴더 만든 다음 각 요소에 대한 컴포넌트 만든 후 App.tsx에 2.2 앱 레이아웃 구조 변경*/
