@@ -1,5 +1,10 @@
 import React from "react";
+import { useWindowDimensions } from "../hooks/useWindowDimensions";
 const Main = () => {
+    const {width} = useWindowDimensions();
+    if (width <= 768) {
+      return null;
+    }
     return <main className="content">Main</main>
 };
 

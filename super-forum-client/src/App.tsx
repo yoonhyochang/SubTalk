@@ -19,5 +19,7 @@ function App() {
   );
 }
 
+//* 4. 훅을 사용하영 기기 크기기에 맞는 랜더링 하기
+//* 4.1 src/hooks폴더 만든후 useWindowDimensions.ts 파일 추가함
 export default App;
 //* 2.3 App.css 파일 이동
